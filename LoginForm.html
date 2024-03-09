@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <script
+      src="https://kit.fontawesome.com/088c63ddf6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="formvalidate.css" />
+  </head>
+  <body>
+    <div id="container">
+      <form
+        action="mailto:someone@example.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <i class="fa-solid fa-circle-user"></i>
+        <div class="input-group">
+          <label>First Name:</label>
+          <input
+            type="text"
+            placeholder="Enter Your First Name"
+            id="fname"
+            onkeyup="validatefirstName()"
+          />
+          <span id="name-error"></span>
+        </div>
+        <div class="input-group">
+          <label>Last Name:</label>
+          <input
+            type="text"
+            placeholder="Enter Your Last Name"
+            id="lname"
+            onkeyup="validateLastName()"
+          />
+          <span id="lname-error"></span>
+        </div>
+        <div class="input-group">
+          <label>Password:</label>
+          <input
+            type="text"
+            placeholder="Enter Password "
+            id="password"
+            onkeyup="validatepassword()"
+          />
+          <!-- <input type="checkbox" onclick="myFunction()"> -->
+          <span id="password-error"></span>
+        </div>
+        <div class="input-group">
+          <label>Confirm Password:</label>
+          <input
+            type="text"
+            placeholder="Enter Confirm Password"
+            id="cpassword"
+            onkeyup="validateconfirmpassword()"
+          />
+          <span id="Cpassword-error"></span>
+        </div>
+        <div class="input-group">
+          <label>Email:</label>
+          <input
+            type="email"
+            placeholder="Enter Your Email "
+            id="email"
+            onkeyup="validateemail()"
+          />
+          <span id="email-error"></span>
+        </div>
+        <div class="input-group">
+          <label>Phone No:</label>
+          <input
+            type="tel"
+            placeholder="Enter Your Phone No"
+            id="phone"
+            onkeyup="validatephone()"
+          />
+          <span id="phone-error"></span>
+        </div>
+        <div class="input-group">
+          <label>Message:</label>
+          <textarea
+            type="text"
+            rows="3"
+            placeholder="Enter Your Message Here"
+            id="message"
+            onkeyup="validatemessage()"
+          ></textarea>
+          <span id="message-error"></span>
+        </div>
+        <button onclick="return validateForm()">Submit</button>
+        <span id="submit-error" id="submit" onkeyup="validatesubmit()"></span>
+      </form>
+    </div>
+    <script src="validateform.js"></script>
+  </body>
+</html>
